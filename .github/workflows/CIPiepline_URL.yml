@@ -13,6 +13,12 @@ jobs:
 
     - name: Run the c#tests
       run: dotnet test
+      
+    - name: typescript
+      run: npm t
+    
+    - name: runtype 
+      run: npm run lint
 
     - name: Run the app
       run: dotnet run
