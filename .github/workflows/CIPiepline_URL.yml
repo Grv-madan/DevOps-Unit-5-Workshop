@@ -15,10 +15,10 @@ jobs:
       run: dotnet test
       
     - name: typescript
-      run: npm t
+      run: npm install
     
     - name: runtype 
-      run: npm run lint
+      run: npm run build
 
     - name: Run the app
-      run: dotnet run
+      run: npm run lint
