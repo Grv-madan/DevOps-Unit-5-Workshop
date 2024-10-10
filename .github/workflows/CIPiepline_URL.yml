@@ -7,5 +7,10 @@ jobs:
     runs-on: ubuntu-latest      # Sets the build environment a machine with the latest Ubuntu installed
     steps:
     - uses: actions/checkout@v4 # Adds a step to checkout the repository code
-    - name: Hello world       # Name of step
-      run: echo 'Hello world' # Command to run
+    
+    - name: Build the C# code       # Name of step
+      run: dotnew build # Command to run
+
+    - name: Run the c#tests
+      working-directory: cd "C:\Users\gmadan\OneDrive - American International Group, Inc\Documents\GitHub\DevOps-Unit-5-Workshop\DotnetTemplate.Web.Tests"  
+      run: dotnet test
