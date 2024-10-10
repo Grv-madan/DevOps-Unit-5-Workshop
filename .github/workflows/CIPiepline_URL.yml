@@ -14,11 +14,14 @@ jobs:
     - name: Run the c#tests
       run: dotnet test
       
-    - name: typescript
+    - name: Install
+      working-directory: DotnetTemplate.Web
       run: npm install
     
-    - name: runtype 
+    - name: runtype
+      working-directory: DotnetTemplate.Web
       run: npm run build
 
     - name: Run the app
+      working-directory: DotnetTemplate.Web
       run: npm run lint
