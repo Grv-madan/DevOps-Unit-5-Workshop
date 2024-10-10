@@ -9,8 +9,4 @@ jobs:
     - uses: actions/checkout@v4 # Adds a step to checkout the repository code
     
     - name: Build the C# code       # Name of step
-      run: dotnew build # Command to run
-
-    - name: Run the c#tests
-      working-directory: cd "C:\Users\gmadan\OneDrive - American International Group, Inc\Documents\GitHub\DevOps-Unit-5-Workshop\DotnetTemplate.Web.Tests"  
-      run: dotnet test
+      run: dotnet build # Command to run
