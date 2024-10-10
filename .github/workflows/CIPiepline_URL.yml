@@ -13,3 +13,6 @@ jobs:
 
     - name: Run the c#tests
       run: dotnet test
+
+    - name: Run the app
+      run: dotnet run
