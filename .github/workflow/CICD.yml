@@ -30,7 +30,7 @@ jobs:
     - name: Restore .NET dependencies
       run: dotnet restore
 
-    # Step 4: Build C# code
+    # Step 4: Build C#
     - name: Build .NET project
       run: dotnet build --configuration Release
 
