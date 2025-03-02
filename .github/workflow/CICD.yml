@@ -38,7 +38,7 @@ jobs:
     - name: Run .NET tests
       run: dotnet test --configuration Release --no-build --verbosity normal
 
-    # Step 6: Set up Node.js for TypeScript
+    # Step 6: Set up Node.js for TypeScrip
     - name: Set up Node.js
       uses: actions/setup-node@v3
       with:
