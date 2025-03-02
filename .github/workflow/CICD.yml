@@ -34,7 +34,7 @@ jobs:
     - name: Build .NET project
       run: dotnet build --configuration Release
 
-    # Step 5: Run C# tests
+    # Step 5: Run C#
     - name: Run .NET tests
       run: dotnet test --configuration Release --no-build --verbosity normal
 
