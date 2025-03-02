@@ -17,7 +17,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    # Step 2: Set up .NET 8.0 SD
+    # Step 2: Set up .NET 8.0
     - name: Set up .NET 8.0
       uses: actions/setup-dotnet@v2
       with:
@@ -30,11 +30,11 @@ jobs:
     - name: Restore .NET dependencies
       run: dotnet restore
 
-    # Step 4: Build C# code
+    # Step 4: Build C#
     - name: Build .NET project
       run: dotnet build --configuration Release
 
-    # Step 5: Run C# tests
+    # Step 5: Run C#
     - name: Run .NET tests
       run: dotnet test --configuration Release --no-build --verbosity normal
 
