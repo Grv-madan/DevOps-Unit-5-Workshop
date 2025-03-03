@@ -10,7 +10,7 @@ on:
 
 jobs:
   
-  build-csharp:
+  build-csharpscript:
     runs-on: ubuntu-latest  # You can change this to `windows-latest` or `macos-latest` depending on your environment
 
     steps:
