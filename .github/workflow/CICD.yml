@@ -39,7 +39,7 @@ jobs:
     - name: Run .NET tests
       run: dotnet test --configuration Release --no-build --verbosity normal
 
-  build-typescript:
+  build-typescript_2:
     runs-on: ubuntu-latest  # You can change this to `windows-latest` or `macos-latest` depending on your environment
 
     steps:
