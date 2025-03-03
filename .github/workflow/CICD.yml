@@ -9,7 +9,8 @@ on:
       - main
 
 jobs:
-  build:
+  
+  build-csharp:
     runs-on: ubuntu-latest  # You can change this to `windows-latest` or `macos-latest` depending on your environment
 
     steps:
@@ -38,6 +39,10 @@ jobs:
     - name: Run .NET tests
       run: dotnet test --configuration Release --no-build --verbosity normal
 
+  build-typescript:
+    runs-on: ubuntu-latest  # You can change this to `windows-latest` or `macos-latest` depending on your environment
+
+    steps:
     # Step 6: Set up Node.js for TypeScrip
     - name: Set up Node.js
       uses: actions/setup-node@v3
