@@ -56,7 +56,7 @@ jobs:
 
   notify:
     runs-on: ubuntu-latest
-    needs: [build-csharp, build-typescript]  # Ensure the notify job runs after the others
+    needs: [build-csharp_new, build-typescript]  # Ensure the notify job runs after the others
 
     steps:
       - name: Send Slack notification (on success)
