@@ -16,6 +16,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
 
+        
       - name: Set up .NET 8.0 SDK
         uses: actions/setup-dotnet@v2
         with:
@@ -43,15 +44,19 @@ jobs:
           node-version: '16'
 
       - name: Install dependencies (npm)
+        working-directory: ./DotnetTemplate.Web 
         run: npm install
 
       - name: Build TypeScript project
+        working-directory: ./DotnetTemplate.Web
         run: npm run build
 
       - name: Run TypeScript linter
+        working-directory: ./DotnetTemplate.Web  
         run: npm run lint
 
       - name: Run TypeScript tests
+        working-directory: ./DotnetTemplate.Web
         run: npm test
 
   notify:
@@ -60,7 +65,7 @@ jobs:
 
     steps:
       - name: Send Slack notification (on success)
-        if: success()
+        if: success() 
         run: |
           curl -X POST -H 'Content-type: application/json' --data '{"text":"🚀 CI Workflow succeeded! :tada:"}' ${{ secrets.SLACK_WEBHOOK_URL }}
 
